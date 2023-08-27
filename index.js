@@ -183,6 +183,8 @@ document.addEventListener("keyup", e=>{
 })
 
 window.onload = ()=>{
+    loadingScreen.style.display = "none";
+    mainContent.style.display = "block";
     gameEngine();
 }
 function startGame(){
