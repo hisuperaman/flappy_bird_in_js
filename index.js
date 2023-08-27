@@ -42,7 +42,7 @@ ctx = canvas.getContext("2d")
 
 let pipe_xdir = canvas.width-55;
 let topPipe_ydir = 200;
-let bottomPipe_ydir = 300;
+let bottomPipe_ydir = 320;
 let pipe_width = 52;
 let pipe_height = 320;
 
@@ -100,7 +100,7 @@ function restartGame(){
     bird_ydir = 200;
     pipe_xdir = canvas.width-55;
     topPipe_ydir = 200;
-    bottomPipe_ydir = 300;
+    bottomPipe_ydir = 320;
     play_again.style.display = "none";
     instructions.style.display = "block";
     score = 0;
@@ -161,8 +161,9 @@ function gameEngine(){
 
     if(pipe_xdir+pipe_width<=0){
         pipe_xdir = canvas.width;
-        topPipe_ydir = randomNumber(125, 250)
-        bottomPipe_ydir = randomNumber(300, 400)
+        let random_offset = randomNumber(100, 300)
+        topPipe_ydir = random_offset
+        bottomPipe_ydir = random_offset+120
     }
     change_birdimg()
 }
